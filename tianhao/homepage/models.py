@@ -4,7 +4,7 @@ import MySQLdb
 
 from MySQLdb.cursors import DictCursor
 
-
+"""
 class MysqlServer(object):
 
     def __init__(self):
@@ -27,4 +27,4 @@ def test():
     all_row = my.query(sql)
     print all_row[6]
 
-
+"""
