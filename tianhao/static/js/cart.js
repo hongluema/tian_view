@@ -48,7 +48,7 @@ mounted: function() {
 methods: {
       cartView: function() {
         var _this = this;
-        this.$http.get("data/cartData.json", {"id": 123}).then(function(res) {
+        this.$http.get("/static/data/cartData.json", {"id": 123}).then(function(res) {
           _this.productList = res.body.result.list;
           // _this.totalMoney =  res.body.result.totalMoney;
         });
