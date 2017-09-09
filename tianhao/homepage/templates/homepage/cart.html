@@ -196,13 +196,13 @@
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
 							<li>
-								<a href="{% url homepage:require_login %}"><span class="glyphicon glyphicon-user"></span> 登录</a>
+								<a href="/tianhao/require_login/"><span class="glyphicon glyphicon-user"></span> 登录</a>
 							</li>
 							<li>
-								<a href="{% url homepage:homepage:require_register %}">注册</a>
+								<a href="/tianhao/require_register/">注册</a>
 							</li>
 							<li>
-								<a href="{% url homepage:cart %}"><span class="glyphicon glyphicon-shopping-cart"></span> 购物车</a>
+								<a href="/tianhao/cart/"><span class="glyphicon glyphicon-shopping-cart"></span> 购物车</a>
 							</li>
 						</ul>
 					</div>
@@ -334,10 +334,10 @@
 										总金额: <span class="total-price">{{totalMoney | money('元')}}</span>
 									</div>
 									<div class="next-btn-wrap">
-										<a href="{% url homepage:address %}" class="btn btn--red" style="width: 100px">去结算</a>
+										<a href="/tianhao/address/" class="btn btn--red" style="width: 100px">去结算</a>
 									</div>
 									<div class="next-btn-wrap">
-										<a href="{% url homepage:address %}" class="btn btn--blue" style="width: 100px">继续购物</a>
+										<a href="/tianhao/address/" class="btn btn--blue" style="width: 100px">继续购物</a>
 									</div>
 								</div>
 							</div>
