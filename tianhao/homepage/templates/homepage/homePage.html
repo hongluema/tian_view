@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html>
 	<head>
@@ -6,8 +7,8 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="keywords" content="天昊健康 基因检测  孕前夫妇 重大遗传病  筛查   新生儿重大遗传缺陷筛查">
 		<title>天昊健康</title>
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="css/homePage.css"/>
+		<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/homePage.css' %}"/>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 	    <!--[if lt IE 9]>
@@ -60,25 +61,25 @@
                                          <tbody><tr>
                                              <td>
                                                  <div class="pic">
-                                                     <a href="#"><img src="img/about-1.jpg" alt=""></a>
+                                                     <a href="#"><img src="{% static 'img/about-1.jpg' %}" alt=""></a>
                                                  </div>
                                                  <p><a href="#">天昊简介</a></p>
                                              </td>
                                              <td>
                                                  <div class="pic">
-                                                    <a href="#"><img src="img/about-2.jpg" alt=""></a>
+                                                    <a href="#"><img src="{% static 'img/about-2.jpg' %}" alt=""></a>
                                                  </div>
                                                  <p><a href="#">天昊荣誉</a></p>
                                              </td>
                                              <td>
                                                  <div class="pic">
-                                                     <a href="#"><img src="img/about-3.jpg" alt=""></a>
+                                                     <a href="#"><img src="{% static 'img/about-3.jpg' %}" alt=""></a>
                                                  </div>
                                                  <p><a href="#">联系我们</a></p>
                                              </td>
                                              <td>
                                                  <div class="pic">
-                                                         <a href="#"><img src="img/about-4.jpg" alt=""></a>
+                                                         <a href="#"><img src="{% static 'img/about-4.jpg' %}" alt=""></a>
                                                  </div>
                                                  <p><a href="#">公司新闻</a></p>
                                              </td>
@@ -94,25 +95,25 @@
                                          <tbody><tr>
                                              <td>
                                                  <div class="pic">
-                                                     <a href="#"><img src="img/product-1.jpg" alt=""></a>
+                                                     <a href="#"><img src="{% static 'static/img/product-1.jpg' %}" alt=""></a>
                                                  </div>
                                                  <p><a href="#">孕前基因筛查</a></p>
                                              </td>
                                              <td>
                                                  <div class="pic">
-                                                    <a href="#"><img src="img/product-2.jpg" alt=""></a>
+                                                    <a href="#"><img src="{% static 'static/img/product-2.jpg' %}" alt=""></a>
                                                  </div>
                                                  <p><a href="#">孕前地中海贫血基因筛查</a></p>
                                              </td>
                                              <td>
                                                  <div class="pic">
-                                                     <a href="#"><img src="img/product-3.jpg" alt=""></a>
+                                                     <a href="#"><img src="{% static 'static/img/product-3.jpg' %}" alt=""></a>
                                                  </div>
                                                  <p><a href="#">新生儿基因筛查</a></p>
                                              </td>
                                              <td>
                                                  <div class="pic">
-                                                         <a href="#"><img src="img/product-4.jpg" alt=""></a>
+                                                         <a href="#"><img src="{% static 'static/img/product-4.jpg' %}" alt=""></a>
                                                  </div>
                                                  <p><a href="#">新生儿耳聋基因筛查</a></p>
                                              </td>
@@ -130,25 +131,25 @@
                                          <tbody><tr>
                                              <td>
                                                  <div class="pic">
-                                                     <a href="#"><img src="img/join-1.jpg" alt=""></a>
+                                                     <a href="#"><img src="{% static 'img/join-1.jpg' %}" alt=""></a>
                                                  </div>
                                                  <p><a href="#">人才发展</a></p>
                                              </td>
                                              <td>
                                                  <div class="pic">
-                                                    <a href="#"><img src="img/join-2.jpg" alt=""></a>
+                                                    <a href="#"><img src="{% static 'img/join-2.jpg' %}" alt=""></a>
                                                  </div>
                                                  <p><a href="#">校园招聘</a></p>
                                              </td>
                                              <td>
                                                  <div class="pic">
-                                                     <a href="#"><img src="img/join-3.jpg" alt=""></a>
+                                                     <a href="#"><img src="{% static 'img/join-3.jpg' %}" alt=""></a>
                                                  </div>
                                                  <p><a href="#">社会招聘</a></p>
                                              </td>
                                              <td>
                                                  <div class="pic">
-                                                         <a href="#"><img src="img/join-4.jpg" alt=""></a>
+                                                         <a href="#"><img src="{% static 'img/join-4.jpg' %}" alt=""></a>
                                                  </div>
                                                  <p><a href="#">天昊生活</a></p>
                                              </td>
@@ -185,12 +186,12 @@
 			      	<div data-ride="carousel" id="carousel_container" class="carousel slide">
 					    <!--图片容器 -->
 					    <div class="carousel-inner">
-						    <div class="item"><img src="img/slider-1.jpg"/></div>
-						    <div class="item active"><img src="img/slider-2.jpg"/></div>
-						    <div class="item"><img src="img/slider-3.jpg"/></div>
-						    <div class="item"><img src="img/slider-4.jpg"/></div>
-						    <div class="item"><img src="img/slider-5.jpg"/></div>
-						    <div class="item"><img src="img/slider-6.jpg"/></div>
+						    <div class="item"><img src="{% static 'img/slider-1.jpg' %}"/></div>
+						    <div class="item active"><img src="{% static 'img/slider-2.jpg' %}"/></div>
+						    <div class="item"><img src="{% static 'img/slider-3.jpg' %}"/></div>
+						    <div class="item"><img src="{% static 'img/slider-4.jpg' %}"/></div>
+						    <div class="item"><img src="{% static 'img/slider-5.jpg' %}"/></div>
+						    <div class="item"><img src="{% static 'img/slider-6.jpg' %}"/></div>
 						</div>
 					      	  	
 					    <!--小圆圈容器 -->
@@ -243,7 +244,7 @@
 		                    <div class="pic fl" style="width: 148px;">
 		                    	<div class="table">
 		                    		<div class="tableCell">
-		                    			<img src="img/menu-1.png" alt="">
+		                    			<img src="{% static 'img/menu-1.png' %}" alt="">
 		                    		</div>
 		                    	</div>
 		                    </div>
@@ -340,7 +341,7 @@
 				       <li>
 				       	<a class="news-items" itemid="157">
 				       		<div class="pic">
-				       			<img src="img/gene-pic-1.jpg" width="100%">
+				       			<img src="{% static 'img/gene-pic-1.jpg' %}" width="100%">
 				       		</div>
 				       	</a>
 				       	<div class="soltx">
@@ -353,7 +354,7 @@
 				       <li>
 				       	<a class="news-items" itemid="158">
 				       		<div class="pic">
-				       			<img src="img/gene-pic-2.jpg" width="100%">
+				       			<img src="{% static 'img/gene-pic-2.jpg' %}" width="100%">
 				       		</div>
 				       	</a>
 				       	<div class="soltx">
@@ -366,7 +367,7 @@
 				       <li>
 				       	<a class="news-items" itemid="165">
 				       		<div class="pic">
-				       			<img src="img/gene-pic-3.jpg" width="100%"></div></a><div class="soltx"><a class="news-items" itemid="165">
+				       			<img src="{% static 'img/gene-pic-3.jpg' %}" width="100%"></div></a><div class="soltx"><a class="news-items" itemid="165">
 				       				<div class="tits">基因的结构与功能</div>
 				       				<div class="con">一个细胞或病毒所携带的全部遗传信息或整套基因即基因组（genome），它包括每一条染色体和所有亚细胞器的DNA序列信息。基因（gene）则是指能产生一条肽链或功能RNA所必需的DNA片段。它包括编码区和其上下游区域，以及在编码片段间（外显子）的间断切割序列（内含子）。基因经过…</div>
 				       			</a>
@@ -375,7 +376,7 @@
 				       <li>
 				       	<a class="news-items" itemid="164">
 				       		<div class="pic">
-				       			<img src="img/gene-pic-4.jpg" width="100%">
+				       			<img src="{% static 'img/gene-pic-4.jpg' %}" width="100%">
 				       		</div>
 				       	</a>
 				       	<div class="soltx">
@@ -388,7 +389,7 @@
 				       <li>
 				       	<a class="news-items" itemid="163">
 				       		<div class="pic">
-				       			<img src="img/gene-pic-5.jpg" width="100%"></div></a><div class="soltx">
+				       			<img src="{% static 'img/gene-pic-5.jpg' %}" width="100%"></div></a><div class="soltx">
 				       				<a class="news-items" itemid="163">
 				       					<div class="tits">基因与生命体</div>
 				       					<div class="con">细胞（cell）是生物进行生命活动的基本单位。细菌、立克次体和支原体等属于原核细胞（procarytic cell），真菌、植物、动物及人体是由真核细胞（eucaryotic cell）构成。真核细胞比原核细胞进化程度高、结构复杂，最主要特征是前者含有核被膜包围的细胞核（nucleus）。真核细胞…</div>
@@ -398,7 +399,7 @@
 				       <li>
 				       	<a class="news-items" itemid="162">
 				       		<div class="pic">
-				       			<img src="img/gene-pic-6.jpg" width="100%">
+				       			<img src="{% static 'img/gene-pic-6.jpg' %}" width="100%">
 				       		</div>
 				       	</a>
 				       	<div class="soltx">
@@ -411,7 +412,7 @@
 				       <li>
 				       	<a class="news-items" itemid="161">
 				       		<div class="pic">
-				       			<img src="img/gene-pic-7.jpg" width="100%">
+				       			<img src="{% static 'img/gene-pic-7.jpg' %}" width="100%">
 				       		</div>
 				       	</a>
 				       	<div class="soltx">
@@ -424,7 +425,7 @@
 				       <li>
 				       	<a class="news-items" itemid="247">
 				       		<div class="pic">
-				       			<img src="img/gene-pic-8.jpg" width="100%">
+				       			<img src="{% static 'img/gene-pic-8.jpg' %}" width="100%">
 				       		</div>
 				       	</a>
 				       	<div class="soltx">
@@ -443,13 +444,13 @@
 		</div>
 	</body>
 	<!--首页动态效果的实现-->
-	<script src="js/homePage.js" type="text/javascript" charset="utf-8"></script>
+	<script src="{% static 'js/homePage.js' %}" type="text/javascript" charset="utf-8"></script>
 	 <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     
-    <script>window.jQuery || document.write('<script src="js"><\/script>')</script>
-    <script src="js/bootstrap.min.js"></script>
+{#    <script>window.jQuery || document.write('<script src="js"><\/script>')</script>#}
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <!--<script src="BootStrap/assets/js/ie10-viewport-bug-workaround.js"></script>-->
 </html>
