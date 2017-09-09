@@ -10,4 +10,9 @@ urlpatterns = [
     url("^$",views.home,name="home"),
     url("^login$",views.login,name="login"),
     url("^register$",views.register,name="register"),
+    url("^address",views.address,name="address"),
+    url("^cart",views.cart,name="cart"),
+    url("^shopping",views.shopping,name="shopping"),
+    url("^require_register$",views.require_register,name="require_register"),
+    url("^require_login$",views.require_login,name="require_login"),
 ]

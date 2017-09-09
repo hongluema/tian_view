@@ -168,7 +168,7 @@ img {
 .carousel-inner{
 	z-index: 2;
 }
-.carousel-control{
+.carousel .carousel-control{
 	z-index: 4;
 }
 /*技术服务展示的样式*/

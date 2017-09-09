@@ -84,7 +84,7 @@
                                </div>   
 		              </li>
 		              <li class="nav-item">
-		              	<a href="shopping.html">在线购买</a>
+		              	<a href="{% url homepage:shopping %}">在线购买</a>
 		              	<div class="nav-hd">
                            		<table border="0" cellpadding="0" cellspacing="0">
                                          <tbody><tr>
@@ -165,9 +165,9 @@
 		              </li>
 		            </ul>
 		            <ul class="nav navbar-nav navbar-right">
-		              <li><a href=""><span class="glyphicon glyphicon-user"></span> 登录</a></li>
-		              <li><a href="register.html">注册</a></li>
-		              <li><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span> 购物车</a></li>
+		              <li><a href="{% url homepage:require_login %}"><span class="glyphicon glyphicon-user"></span> 登录</a></li>
+		              <li><a href="{% url homepage:require_register %}">注册</a></li>
+		              <li><a href="{% url homepage:cart %}"><span class="glyphicon glyphicon-shopping-cart"></span> 购物车</a></li>
 		            </ul>
 		          </div>
 		        </div>

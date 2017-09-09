@@ -13,6 +13,23 @@ def home(request):
     pass
     return render(request,"homepage/homePage.html")
 
+def require_login(request):
+    return render(request,"homepage/login.html")
+
+def require_register(request):
+    return render(request,"homepage/register.html")
+
+def address(request):
+    return render(request,"homepage/address.html")
+
+def cart(request):
+    return render(request,"homepage/cart.html")
+
+def shopping(request):
+    return render(request,"homepage/shopping.html")
+
+
+
 def login(request):
     username = request.POST.get("username")
     password = request.POST.get("password")
