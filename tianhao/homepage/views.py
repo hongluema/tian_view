@@ -8,4 +8,4 @@ def index(request):
 
 def home(request):
     pass
-    return render(request,"shopping-cart/tianhao/homePage.html")
+    return render(request,"homepage/index.html")

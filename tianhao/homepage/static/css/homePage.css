@@ -1,0 +1,361 @@
+/*页面重置*/
+body {
+	font: 12px/1.5 tahoma, arial, "\5b8b\4f53";
+}
+
+body,
+dl,
+dd,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+
+em,i,b{
+	font-style: normal;
+}
+
+ol,
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	border: none;
+	vertical-align: middle;
+}
+
+
+.left {
+	float: left;
+}
+
+.rigth {
+	float: right;
+}
+
+.cl {
+	clear: both;
+}
+
+/*首页头部的样式*/
+/*附加搜索框的样式*/
+.attachedSearchContainer{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	
+	display: none;
+	z-index: 1000;
+	/*opacity: 0.95;*/}
+	.attachedSearchContainer .navbar{
+		background-color:rgba(1,66,138,0.8);}
+	.attachedSearchContainer .form-group {
+    	margin: 8.5px 0 0 50px;
+    	width: 500px;}
+/*响应式布局的实现*/
+@media (max-width: 768px) {
+.attachedSearchContainer .navbar{
+		display: none;
+	}
+}
+@media (max-width: 992px) {
+	.attachedSearchContainer .navbar{
+		display: none;
+	}
+}
+
+
+/*导航条样式*/
+.navbar{
+	height: 50px;
+	margin: 0;
+	background-color: #1428a0;
+	border: none;
+	border-radius: 0;
+}
+.navbar-default .navbar-brand,.navbar-default .navbar-nav>li>a{
+    color: #fff;
+}
+.navbar-default .navbar-nav>li>a{
+	font-size: 18px;
+}
+.navbar-default .navbar-brand:hover,.navbar-default .navbar-nav>li>a:hover{
+	color: #000;
+	background-color: #b8b8ee;
+}
+/*导航条中搜索框的样式*/
+.form-group{
+	margin: 8.5px 0 0 10px;
+	width: 300px;
+}
+.form-group .input-group .form-control{
+	border-radius: 20px;
+}
+.input-group{
+	width: 100%;
+}
+.input-group .glyphicon{
+	right: 12px;
+    position: absolute;
+    z-index: 2;
+    font-size: 18px;
+    top: 7px;
+}
+/*导航条中隐藏的板块的样式*/
+.navbar-nav li{
+	position: relative;
+}
+.nav-hd{
+	display: none;
+	padding: 20px 0;
+    width: 1349px;
+    left: 0;
+    z-index: 12;
+    position: fixed;
+    top: 51px;
+    overflow: hidden;
+    background: rgba(240,240,240,0.9);
+}
+.nav-hd table{
+	margin: 0 auto;
+}
+.nav-hd table td{
+	vertical-align: top;
+    padding: 0 15px;
+    text-align:center;
+}
+.nav-hd table td img{
+	width: 155px;
+	height: 103px;
+}
+/*最新新闻的的样式*/
+.content{
+	background: #f7f7f7;
+}
+.latest_news{
+	height: 60px;
+}
+.news_list_ctn{
+	width: 640px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 70px 0 200px;
+    z-index: 1;
+} 
+.news_list_ctn p.lbt{
+	position: absolute;
+	top: 0;
+	display: inline-block;
+    line-height: 60px;
+    font-size: 18px;
+    color: #446cb3;
+    font-weight: bold;
+    font-family: "微软雅黑","黑体","宋体";  
+}
+.news_list{
+	display: inline-block;
+	padding-left: 100px;
+}
+.news_item{
+	line-height: 60px;
+}
+/*修补上下拨动的公告出现在轮播图上面*/
+.carousel-inner{
+	z-index: 2;
+}
+/*技术服务展示的样式*/
+.index-menu{
+	border-bottom: 1px solid #eee;
+    min-width: 1200px;
+    position: relative;
+    z-index: 3;
+}
+
+.index-menu, .index-menu-wrap {
+    height: 378px;
+    overflow: hidden;
+    width: 100%;
+}
+.index-menu li {
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+.index-menu li {
+    border-top-width: 8px;
+    border-top-style: solid;
+    overflow: hidden;
+    display: block;
+    height: 370px;
+    box-shadow: 2px 0 10px rgba(0,0,0,.5);
+    transition: all .35s;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    -ms-transition: all .35s;
+    -o-transition: all .35s;
+    width: 708px;
+}
+.abs {
+    position: absolute;
+}
+a {
+    text-decoration: none;
+    color: #555;
+    transition: all .35s;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    -ms-transition: all .35s;
+    -o-transition: all .35s;
+}
+.index-menu li a.more {
+    display: inline-block;
+    bottom: 10px;
+    right: 0;
+    border-radius: 4px 0 0 4px;
+    color: #fff;
+    font-size: 15px;
+    padding: 5px 12px;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+}
+.index-menu li a.link {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.index-menu li .pic {
+    height: 100%;
+    text-align: center;
+    padding: 0 35px;
+}
+.fl {
+    float: left;
+    display: inline-block;
+}
+.table {
+    display: table;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+.tableCell {
+    display: table-cell;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+}
+.index-menu li .pic img {
+    max-width: 100%;
+}
+.index-menu li .info {
+    height: 100%;
+    padding: 0 25px;
+}
+.index-menu li .info .tableCell {
+    text-align: left;
+}
+.index-menu li p {
+    font-size: 23px;
+    line-height: 35px;
+    font-weight: bold;
+}
+.index-menu li span {
+    font-size: 14px;
+    font-family: arial;
+    word-break: break-all;
+    display: block;
+    word-wrap: break-word;
+    width: 220px;
+}
+.index-menu li .info .tableCell {
+    text-align: left;
+}
+/*基因百科的样式*/
+.zcl-olt{
+	padding: 60px 0;
+	background: url(../img/gen_bg.jpg);
+}
+/*标题的样式*/
+.silco{
+	font-size: 28px;
+    text-align: center;
+    line-height: 65px;
+    color: #666;
+}
+/*每一模块的样式*/
+.xuslt li {
+    width: 23%;
+    border: 1px solid #ddd;
+}
+.zcl-olt li {
+    margin: 0 1% 20px;
+    font-family: "微软雅黑","黑体","宋体";
+    float: left;
+    position: relative;
+}
+.zcl-olt li a {
+    display: block;
+    background: #fff;
+    padding-bottom: 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.xuslt li .pic {
+    overflow: hidden;
+}
+.xuslt li .pic img {
+    transition: all 0.5s ease;
+}
+.xuslt li .pic img:hover{
+	transform: scale(1.2,1.2);
+}
+.zcl-olt li .soltx {
+    padding: 0 3%;
+    background: #fff;
+}
+.xuslt li .tits {
+    line-height: 40px;
+    height: 40px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 18px;
+}
+.zcl-olt li .con {
+    line-height: 20px;
+    height: 80px;
+    overflow: hidden;
+    color: #666;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*点击图片放大的效果*/
+@-webkit-keyframes myLarger {
+	50%{
+		-webkit-transform:scale(1.2,1.2);		
+		-moz-transform:scale(1.2,1.2);		
+		-ms-transform:scale(1.2,1.2);		
+		-o-transform:scale(1.2,1.2);		
+		transform:scale(1.2,1.2);		
+	}
+	100%{
+		-webkit-transform: scale(1,1);
+		-moz-transform: scale(1,1);
+		-mz-transform: scale(1,1);
+		-o-transform: scale(1,1);
+		transform: scale(1,1);
+	}
+} 

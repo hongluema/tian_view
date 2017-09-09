@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta content="IE=dege,chrom=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+    <title>Cart</title>
+    <link href="css/base.css" rel="stylesheet">
+    <link href="css/checkout.css" rel="stylesheet">
+    <link href="css/modal.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/angular.js/1.4.6/angular.min.js"></script>
+    <style type="text/css">
+    		.addr_btn{
+    			padding: 10px 20px;
+    			background:#446cb3;
+    			margin: 0 auto;
+    			border-radius: 3px;
+    			color: #fff;
+    		}
+    		.addr_accountInfo{
+    			width: 600px;
+    			margin: 0 455px;
+    		}
+    		.addr_item{
+    			padding: 10px 20px;
+    		}
+			.addr_accountInfo_err{
+				color: red;
+			}
+			.addr_label{
+				width: 100px;
+				display: inline-block;
+				text-align: right;
+			}
+			.addr_confirm{
+				width: 150px;
+				margin: 20px auto;
+			}
+			.addr_payment{
+				padding-top: 28px;
+			}
+			.addr_payment_sel{
+				width: 360px;
+				margin: 0 auto;
+			}
+			.addr_payment_b{
+				padding: 10px;
+				cursor: pointer;
+			}
+			.selected{
+				color: blue;
+			}
+			table{
+				margin: 0 auto;
+			}
+			tr,th,td{
+				border: 1px solid #bbb;
+				text-align: center;
+				padding: 10px 60px 10px 10px;
+			}
+			.logo{
+				height: 100px;
+				width: 100px;
+			}
+    </style>
+</head>
+	<body ng-app="lesson" ng-controller="lesson13">	
+		<!-- process step -->
+          <div class="check-step">
+            <ul>
+            	<!--ng-class=" paymentType==1 ? 'selected' : '' "-->
+              <li ng-class=" step1Cur == 1 ? 'cur' : '' ">确认个人信息</li>
+              <li ng-class=" step2Cur == 1 ? 'cur' : '' ">选择支付方式</li>
+              <li ng-class=" step3Cur == 1 ? 'cur' : '' ">订单确认</li>
+            </ul>
+          </div>
+		<form class="addr_accountInfo" name="accountInfo" ng-show="step1Cur==1"> 
+				<ul>
+					<li class="addr_item">
+						<label class="addr_label">收货人姓名：</label>
+						<input type="text" name="trueName" ng-model="trueName" required ng-pattern="/^\w{2,6}$/" />
+						<span class="addr_accountInfo_err" ng-show="accountInfo.trueName.$dirty && accountInfo.trueName.$invalid">
+							请输入2到6位的收货人姓名
+						</span>
+					</li>
+					<li class="addr_item">
+						<label class="addr_label">电话号码：</label>
+						<input type="text" name="mobile" ng-model="mobile"required ng-pattern="/^[0-9]{11}$/" />
+						<span class="addr_accountInfo_err" ng-show="accountInfo.mobile.$dirty && accountInfo.mobile.$invalid">
+							请输入11位的电话号码
+						</span>
+					</li>
+					<li class="addr_item">
+						<label class="addr_label">QQ：</label>
+						<input type="text" name="QQ" ng-model="QQ" required ng-pattern="/^[0-9]{5,11}$/" />
+						<span class="addr_accountInfo_err" ng-show="accountInfo.QQ.$dirty && accountInfo.QQ.$invalid">
+							请输入5到11位的QQ号码
+						</span>
+					</li>
+					<li class="addr_item">
+						<label class="addr_label">收货地址：</label>
+						<input type="text" name="address" ng-model="address" required/>
+						<span class="addr_accountInfo_err" ng-show="accountInfo.address.$dirty && accountInfo.address.$invalid">
+							请输入正确的收货地址
+						</span>
+					</li>
+					<li class="addr_item">
+						<p ng-show="!needInvoice">
+							<input type="checkbox" ng-model="needInvoice" />需要发票
+						</p>
+						<p ng-show="needInvoice">
+							<label class="addr_label">发票抬头：</label>
+							<input type="text" name="invoiceTitle" ng-model="invoiceTitle" />
+						</p>
+					</li>
+				</ul>
+				<div class="addr_confirm">
+					<button class="addr_btn" ng-click="confirmStep1()" ng-disabled="accountInfo.$invalid">确认个人信息</button>
+				</div>
+			</form>
+			
+			
+			<div ng-show="step2Cur==1" class="addr_payment">
+				<div class="addr_payment_sel">
+					<b class="addr_payment_b" ng-class=" paymentType==1 ? 'selected' : '' " ng-click="changePaymentType(1)" >网银支付</b>
+					<b class="addr_payment_b" ng-class=" paymentType==2 ? 'selected' : '' " ng-click="changePaymentType(2)">支付平台</b>
+				</div>
+				
+				<table class="addr_payment_tab" style="margin: 10px auto;">
+					<thead>
+						<tr>
+							<th>选中</th>
+							<th>ID</th>
+							<th>名称</th>
+						</tr>
+					</thead>
+					<tbody>
+					 	<tr ng-repeat="p in paymentList | filter : filterByType">
+					 		<td>
+					 			<input type="checkbox" ng-model="p.selected" />
+					 		</td>
+					 		<td>{{p.ID}}</td>
+					 		<td>{{p.Title}}</td>
+					 	</tr>
+					</tbody>
+				</table>
+				<div class="addr_confirm">
+					<button class="addr_btn" ng-click="confirmStep2()">确认支付方式</button>
+				</div>
+			</div>
+			<div class="confirm_order" ng-show="step1Cur==0 && step2Cur==0" >
+				<div class="confirm_item">
+					<table>
+						<thead>
+							<tr>
+								<th>订单编号</th>
+								<th>商品名称</th>
+								<th>商品图片</th>
+								<th>单价</th>
+								<th>购买数量</th>
+								<th>总价</th>
+								<th>下单时间</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat=" product in productList ">
+								<td>{{product.orderId}}</td>
+								<td>{{product.productName}}</td>
+								<td><img src="{{product.logo}}" class="logo"/></td>
+								<td>{{product.productPrice}}</td>
+								<td>{{product.buyAmount}}</td>
+								<td>{{product.totalMoney}}</td>
+								<td>{{product.createTime}}</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="confirm_item" style="margin-left: 44px;">
+					<ul>
+						<li class="addr_item">姓名：{{trueName}}</li>
+						<li class="addr_item">电话：{{mobile}}</li>
+						<li class="addr_item">QQ号码：{{QQ}}</li>
+						<li class="addr_item">地址：{{address}}</li>
+						<li class="addr_item" ng-show="needInvoice">抬头发票：{{invoiceTitle}}</li>
+					</ul>
+				</div>
+				<div class="confirm_item" style="margin-left: 44px;">
+					<b>支付方式：{{selectPayment.Title}}</b>
+				</div>
+				<div class="addr_confirm">
+					<button class="addr_btn" ng-click = "checkOut()">确认订单</button>
+				</div>
+			</div>
+		
+			
+	</div>
+	</body>
+    <script src="js/address.js"></script>
+</html>
+
