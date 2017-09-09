@@ -1,0 +1,190 @@
+/*附加搜索框的样式*/
+.attachedSearchContainer{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	display: none;
+	z-index: 1000;}
+	.attachedSearchContainer .navbar{
+		background-color:rgba(1,66,138,0.8);}
+	.attachedSearchContainer .form-group {
+    	margin: 8.5px 0 0 50px;
+    	width: 500px;}
+/*响应式布局的实现*/
+@media (max-width: 768px) {
+.attachedSearchContainer .navbar{
+		display: none;
+	}
+}
+@media (max-width: 992px) {
+	.attachedSearchContainer .navbar{
+		display: none;
+	}
+}
+
+
+/*导航条样式*/
+.navbar{
+	height: 50px;
+	margin: 0;
+	background-color: #1428a0;
+	border: none;
+	border-radius: 0;
+}
+.navbar-default .navbar-brand,.navbar-default .navbar-nav>li>a{
+    color: #fff;
+}
+.navbar-default .navbar-nav>li>a{
+	font-size: 18px;
+}
+.navbar-default .navbar-brand:hover,.navbar-default .navbar-nav>li>a:hover{
+	color: #000;
+	background-color: #b8b8ee;
+}
+/*导航条中搜索框的样式*/
+.form-group{
+	margin: 8.5px 0 0 10px;
+	width: 300px;
+}
+.form-group .input-group .form-control{
+	border-radius: 20px;
+}
+.input-group{
+	width: 100%;
+}
+.navbar-nav .input-group .glyphicon{
+	right: 12px;
+    position: absolute;
+    z-index: 2;
+    font-size: 18px;
+    top: 7px;
+}
+/*导航条中隐藏的板块的样式*/
+.navbar-nav li{
+	position: relative;
+}
+.nav-hd{
+	display: none;
+	padding: 20px 0;
+    width: 1349px;
+    left: 0;
+    z-index: 12;
+    position: fixed;
+    top: 51px;
+    overflow: hidden;
+    background: rgba(240,240,240,0.9);
+}
+.nav-hd table{
+	margin: 0 auto;
+}
+.nav-hd table td{
+	vertical-align: top;
+    padding: 0 15px;
+    text-align:center;
+}
+.nav-hd table td img{
+	width: 155px;
+	height: 103px;
+}
+
+
+/*侧边浮动栏的样式*/
+.float-sild {
+    position: fixed;
+    z-index: 99;
+    right: 10px;
+    bottom: 65px;
+}
+.float-sild a {
+    display: block;
+    height: 45px;
+    width: 45px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    margin-top: 10px;
+    position: relative;
+}
+.float-sild a.tel {
+    background: rgba(255,255,255,0.8) url(../static/img/float-tel.png) no-repeat center center/auto 60%;
+}
+.float-sild a.go-top {
+    background: rgba(255,255,255,0.8) url(../static/img/float-top.png) no-repeat center center/auto 60%;
+}
+
+/*页面底部样式*/
+.footer {
+    background: #486c8c;
+    box-shadow: inset 0 0 240px rgba(0,0,0,0.5);
+    min-width: 1200px;
+}
+.footer-content{
+	padding: 40px 0;
+}
+/*左边的样式*/
+.fl {
+    float: left;
+    display: inline-block;
+}
+.footer-content .cont-list ul {
+    float: left;
+    margin-right: 20px;
+    padding: 0 20px;
+}
+.footer-content .cont-list ul h3 {
+    color: #fff;
+    padding-bottom: 15px;
+}
+.footer-content .cont-list ul li {
+    line-height: 25px;
+    padding-left: 10px;
+}
+.footer-content .cont-list ul li a {
+    color: #ddd;
+    font-size: 12px;
+}
+
+/*右边的样式*/
+.fr {
+    float: right;
+    display: inline-block;
+}
+.footer-content .cont-contact .fr {
+    padding: 0 20px;
+}
+.footer-content .cont-contact .wx-name {
+    font-size: 14px;
+    color: #c7cad3;
+    text-align: center;
+    line-height: 30px;
+}
+.footer-content .logo {
+    margin-bottom: 20px;
+}
+.footer-content .cont-contact .contact li.email {
+    background: url(../static/img/icon-footer-contact.png) no-repeat 0 5px;
+}
+.footer-content .cont-contact .contact li {
+    font-size: 12px;
+    color: #c8cbd4;
+    margin: 5px 0;
+    padding-left: 13px;
+}
+.footer-content .cont-contact .contact li.email a {
+    color: #c8cbd4;
+}
+.footer-content .cont-contact .contact li.web {
+    background: url(../static/img/icon-footer-contact.png) no-repeat 0 -14px;
+}
+.footer-content .cont-contact .contact li.fax {
+    background: url(../static/img/icon-footer-contact.png) no-repeat 0 -33px;
+}
+.footer-content .cont-contact .contact li.tel {
+    background: url(../static/img/icon-footer-contact.png) no-repeat 0 -50px;
+}
+.footer-content .cont-contact .contact li .num {
+    color: #fff;
+    font-family: arial;
+    font-weight: bold;
+}

@@ -1,0 +1,66 @@
+/*通用样式*/
+h1,h2,h3,form{
+	margin: 0;
+	padding: 0;
+}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.clear{
+	clear: both;
+}
+/*登录模块的样式*/
+.loginst {
+    padding: 50px 0;
+    position: relative;
+    width: 900px;
+}
+.wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+.looltx {
+    width: 380px;
+    margin-left: 100px;
+}
+.looltx h2 {
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 45px;
+}
+.looltx h2 a {
+    font-size: 12px;
+    color: #446cb3;
+    margin-left: 10px;
+}
+.lovit {
+    border: 1px solid #e1e1e1;
+    background: #fff;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 30px 8%;
+    position: relative;
+}
+.lovit .sjl {
+    display: block;
+    position: absolute;
+    width: 18px;
+    height: 10px;
+    top: -10px;
+    left: 50px;
+    background: url(../static/img/form-tip.jpg);
+}
+.lovit .lblc {
+    color: #666;
+    margin-bottom: 20px;
+}
+#btnSubmit{
+	margin: 0 10px 0 0;
+	color: #fff;
+	font-weight: bold;
+	letter-spacing: 10px;
+}
+   

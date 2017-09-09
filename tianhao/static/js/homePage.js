@@ -10,8 +10,7 @@ function setBodyWidth(){
 }  
 $(document).ready(  
 	function(){
-		var bodyWidth=setBodyWidth()+"px";  
-		//document.body.style.width=bodyWidth;  
+		var bodyWidth=setBodyWidth()+"px"; 
 		$("body").css("width",bodyWidth);  
 	}  
 ); 
@@ -32,12 +31,6 @@ $(document).ready(function(){
         	$('.attachedSearchContainer').slideDown("slow");
         }
     });
-    
-    var winWidth=$(window).width();
-    $(window).resize(function(){
-    	if(winWidth<992)
-		$('.attachedSearchContainer').css({'dispaly':none});
-	})	
 	
 	
 //	导航条隐藏板块的展示
@@ -89,13 +82,6 @@ $(document).ready(function(){
 			});
 		}
 	);
+		
 	
-	
-	
-	
-	
-	
-	
-	
-	
-})
+});

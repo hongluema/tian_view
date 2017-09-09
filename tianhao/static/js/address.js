@@ -1,11 +1,43 @@
-		var app = angular.module('lesson',[]);
-		app.controller('lesson13',function($scope){
+		//	解决窗口缩放导致页面排版错乱
+function setBodyWidth(){  
+	var barWidthHelper=document.createElement('div');  
+	barWidthHelper.style.cssText="overflow:scroll; width:100px; height:100px;";  
+	document.body.appendChild(barWidthHelper);  
+	var barWidth=barWidthHelper.offsetWidth-barWidthHelper.clientWidth;  
+	document.body.removeChild(barWidthHelper);  
+	var bodyWidth=window.screen.availWidth-barWidth;  
+	return bodyWidth;  
+};
+$(document).ready(  
+	function(){
+		var bodyWidth=setBodyWidth()+"px"; 
+		$("body").css("width",bodyWidth);  
+	}  
+); 
+
+
+$(document).ready(function(){
+	//	导航条隐藏板块的展示
+	$('.nav-item').hover(
+		function(){
+		$(this).children('div.nav-hd').slideDown();
+		},
+		function(){
+		$(this).children('div.nav-hd').slideUp();
+		});
+});
+		
+		
+		
+		
+		var app = angular.module('addr',[]);
+		app.controller('addr-control',function($scope){
 			//确认商品信息
 			$scope.productList = [
 				{
 					orderId : 'GH2017081410001',
 					productName : '贝康诺TM孕前夫妇基因筛检(大众套餐)',
-					logo : '../img/product-1.jpg',
+					logo : 'static/img/product-1.jpg',
 					productPrice: 2400,
 					buyAmount : 1,
 					totalMoney : 2400,
@@ -15,7 +47,7 @@
 				{
 					orderId : 'GH2017081410002',
 					"productName":"贝康诺TM孕前夫妇地中海贫血基因筛检",
-					logo : '../img/product-3.jpg',
+					logo : 'static/img/product-2.jpg',
 					productPrice: 180,
 					buyAmount : 2,
 					totalMoney : 360,

@@ -1,4 +1,3 @@
-{% load staticfiles %}
 <!DOCTYPE html>
 <html>
 	<head>
@@ -7,17 +6,14 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="keywords" content="天昊健康 基因检测  孕前夫妇 重大遗传病  筛查   新生儿重大遗传缺陷筛查">
 		<title>天昊健康</title>
-		<link href="/static/css/bootstrap.min.css" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="{% static 'css/homePage.css' %}"/>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-	    <!--[if lt IE 9]>
-	      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-	      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	    <![endif]-->
+	    <link href="/static/static/BootStrap/css/bootstrap.min.css" rel="stylesheet">
+	    <link href="/static/static/BootStrap/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="/static/css/homePage.css"/>
+		<link rel="stylesheet" type="text/css" href="/static/css/common.css"/>
 	</head>
 	<body>
 		<div class="homePage ">
+			<!--固定搜索框-->
 			<div class="attachedSearchContainer">
 				<nav class="navbar navbar-default">
 		        <div class="container-fluid">
@@ -29,7 +25,6 @@
 		              <li>
 		              	<div class="form-group">
 							<label class="sr-only">搜索:</label>
-							<!--<input type="search" class="form-control" name="name" placeholder="输入关键字">-->
 							<div class="input-group">
 							  <input type="search" class="form-control" name="name" placeholder="输入关键字" aria-hidden="true">
 							  <span class="glyphicon glyphicon-search"></span>
@@ -37,20 +32,20 @@
 						</div>
 		              </li>
 		            </ul>
-		          </div><!--/.nav-collapse -->
-		        </div><!--/.container-fluid -->
+		          </div>
+		        </div>
 		      </nav>			
 			</div>
+			<!--导航条-->
 			<nav class="navbar navbar-default">
 		        <div class="container-fluid">
 		          <div class="navbar-header">
 		            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-		              <!--<span class="sr-only">Toggle navigation</span>-->
 		              <span class="icon-bar"></span>
 		              <span class="icon-bar"></span>
 		              <span class="icon-bar"></span>
 		            </button>
-		            <a class="navbar-brand" href="#">公司首页</a>
+		            <a class="navbar-brand" href="homePage.html">公司首页</a>
 		          </div>
 		          <div id="navbar" class="navbar-collapse collapse">
 		            <ul class="nav navbar-nav">
@@ -61,25 +56,25 @@
                                          <tbody><tr>
                                              <td>
                                                  <div class="pic">
-                                                     <a href="#"><img src="{% static 'img/about-1.jpg' %}" alt=""></a>
+                                                     <a href="#"><img src="/static/static/img/about-1.jpg" alt=""></a>
                                                  </div>
                                                  <p><a href="#">天昊简介</a></p>
                                              </td>
                                              <td>
                                                  <div class="pic">
-                                                    <a href="#"><img src="{% static 'img/about-2.jpg' %}" alt=""></a>
+                                                    <a href="#"><img src="/static/static/img/about-2.jpg" alt=""></a>
                                                  </div>
                                                  <p><a href="#">天昊荣誉</a></p>
                                              </td>
                                              <td>
                                                  <div class="pic">
-                                                     <a href="#"><img src="{% static 'img/about-3.jpg' %}" alt=""></a>
+                                                     <a href="#"><img src="/static/static/img/about-3.jpg" alt=""></a>
                                                  </div>
                                                  <p><a href="#">联系我们</a></p>
                                              </td>
                                              <td>
                                                  <div class="pic">
-                                                         <a href="#"><img src="{% static 'img/about-4.jpg' %}" alt=""></a>
+                                                         <a href="#"><img src="/static/static/img/about-4.jpg" alt=""></a>
                                                  </div>
                                                  <p><a href="#">公司新闻</a></p>
                                              </td>
@@ -89,31 +84,31 @@
                                </div>   
 		              </li>
 		              <li class="nav-item">
-		              	<a href="#">在线购买</a>
+		              	<a href="shopping.html">在线购买</a>
 		              	<div class="nav-hd">
                            		<table border="0" cellpadding="0" cellspacing="0">
                                          <tbody><tr>
                                              <td>
                                                  <div class="pic">
-                                                     <a href="#"><img src="{% static 'static/img/product-1.jpg' %}" alt=""></a>
+                                                     <a href="#"><img src="/static/static/img/product-1.jpg" alt=""></a>
                                                  </div>
                                                  <p><a href="#">孕前基因筛查</a></p>
                                              </td>
                                              <td>
                                                  <div class="pic">
-                                                    <a href="#"><img src="{% static 'static/img/product-2.jpg' %}" alt=""></a>
+                                                    <a href="#"><img src="/static/static/img/product-2.jpg" alt=""></a>
                                                  </div>
                                                  <p><a href="#">孕前地中海贫血基因筛查</a></p>
                                              </td>
                                              <td>
                                                  <div class="pic">
-                                                     <a href="#"><img src="{% static 'static/img/product-3.jpg' %}" alt=""></a>
+                                                     <a href="#"><img src="/static/static/img/product-3.jpg" alt=""></a>
                                                  </div>
                                                  <p><a href="#">新生儿基因筛查</a></p>
                                              </td>
                                              <td>
                                                  <div class="pic">
-                                                         <a href="#"><img src="{% static 'static/img/product-4.jpg' %}" alt=""></a>
+                                                         <a href="#"><img src="/static/static/img/product-4.jpg" alt=""></a>
                                                  </div>
                                                  <p><a href="#">新生儿耳聋基因筛查</a></p>
                                              </td>
@@ -131,25 +126,25 @@
                                          <tbody><tr>
                                              <td>
                                                  <div class="pic">
-                                                     <a href="#"><img src="{% static 'img/join-1.jpg' %}" alt=""></a>
+                                                     <a href="#"><img src="/static/static/img/join-1.jpg" alt=""></a>
                                                  </div>
                                                  <p><a href="#">人才发展</a></p>
                                              </td>
                                              <td>
                                                  <div class="pic">
-                                                    <a href="#"><img src="{% static 'img/join-2.jpg' %}" alt=""></a>
+                                                    <a href="#"><img src="/static/static/img/join-2.jpg" alt=""></a>
                                                  </div>
                                                  <p><a href="#">校园招聘</a></p>
                                              </td>
                                              <td>
                                                  <div class="pic">
-                                                     <a href="#"><img src="{% static 'img/join-3.jpg' %}" alt=""></a>
+                                                     <a href="#"><img src="/static/static/img/join-3.jpg" alt=""></a>
                                                  </div>
                                                  <p><a href="#">社会招聘</a></p>
                                              </td>
                                              <td>
                                                  <div class="pic">
-                                                         <a href="#"><img src="{% static 'img/join-4.jpg' %}" alt=""></a>
+                                                         <a href="#"><img src="/static/static/img/join-4.jpg" alt=""></a>
                                                  </div>
                                                  <p><a href="#">天昊生活</a></p>
                                              </td>
@@ -170,28 +165,26 @@
 		              </li>
 		            </ul>
 		            <ul class="nav navbar-nav navbar-right">
-		              <li><a href="./"><span class="glyphicon glyphicon-user"></span> 登录</a></li>
-		              <li><a href="#">注册</a></li>
+		              <li><a href="login.html"><span class="glyphicon glyphicon-user"></span> 登录</a></li>
+		              <li><a href="register.html">注册</a></li>
 		              <li><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span> 购物车</a></li>
 		            </ul>
-		          </div><!--/.nav-collapse -->
-		        </div><!--/.container-fluid -->
+		          </div>
+		        </div>
 		      </nav>
+		      <!--轮播图-->
 			<div class="flexSlider">
 				<div class="container-fuild">
-	      	  
-			      <div class="row"> 
-			      	    <!--<div class="col-md-3">-->
 			      	    	
 			      	<div data-ride="carousel" id="carousel_container" class="carousel slide">
 					    <!--图片容器 -->
 					    <div class="carousel-inner">
-						    <div class="item"><img src="{% static 'img/slider-1.jpg' %}"/></div>
-						    <div class="item active"><img src="{% static 'img/slider-2.jpg' %}"/></div>
-						    <div class="item"><img src="{% static 'img/slider-3.jpg' %}"/></div>
-						    <div class="item"><img src="{% static 'img/slider-4.jpg' %}"/></div>
-						    <div class="item"><img src="{% static 'img/slider-5.jpg' %}"/></div>
-						    <div class="item"><img src="{% static 'img/slider-6.jpg' %}"/></div>
+						    <div class="item"><img src="/static/static/img/slider-1.jpg"/></div>
+						    <div class="item active"><img src="/static/static/img/slider-2.jpg"/></div>
+						    <div class="item"><img src="/static/static/img/slider-3.jpg"/></div>
+						    <div class="item"><img src="/static/static/img/slider-4.jpg"/></div>
+						    <div class="item"><img src="/static/static/img/slider-5.jpg"/></div>
+						    <div class="item"><img src="/static/static/img/slider-6.jpg"/></div>
 						</div>
 					      	  	
 					    <!--小圆圈容器 -->
@@ -213,12 +206,9 @@
 					      	<span class="glyphicon glyphicon-chevron-right"></span>
 					    </a>
 			      	</div>
-			      	
-			      	    	
-			      	</div>
 			    </div>
 			</div>
-			<!--</div>-->
+			<!--网页内容-->
 			<div class="content">
 				<!--最新的新闻公告-->
 				<div class="latest_news">
@@ -244,7 +234,7 @@
 		                    <div class="pic fl" style="width: 148px;">
 		                    	<div class="table">
 		                    		<div class="tableCell">
-		                    			<img src="{% static 'img/menu-1.png' %}" alt="">
+		                    			<img src="/static/static/img/menu-1.png" alt="">
 		                    		</div>
 		                    	</div>
 		                    </div>
@@ -261,7 +251,13 @@
 		               <li id="index_2" class="abs" style="border-color: rgb(227, 195, 183); left: 218px; z-index: 2; background: rgb(251, 231, 226);">
 		                 <a href="" class="abs more" style="background:#da4c41;">MORE</a>
 		                 <a href="" class="clear link">
-		                        <div class="pic fl" style="width: 148px;"><div class="table"><div class="tableCell"><img src="http://www.majorbio.com/site/majorbio/images/menu-2.png" alt=""></div></div></div>
+		                        <div class="pic fl" style="width: 148px;">
+		                        	<div class="table">
+		                        		<div class="tableCell">
+		                        			<img src="/static/static/img/menu-2.png" alt="">
+		                        		</div>
+		                        	</div>
+		                        </div>
 		                        <div class="info fl">
 		                            <div class="table">
 		                                <div class="tableCell">
@@ -275,7 +271,13 @@
 		             	<li id="index_3" class="abs" style="border-color: rgb(227, 195, 183); left: 436px; z-index: 3; background: rgb(251, 236, 207);">
 		                 <a href="" class="abs more" style="background:#e78539;">MORE</a>
 		                 <a href="" class="clear link">
-		                        <div class="pic fl" style="width: 148px;"><div class="table"><div class="tableCell"><img src="http://www.majorbio.com/site/majorbio/images/menu-3.png" alt=""></div></div></div>
+		                        <div class="pic fl" style="width: 148px;">
+		                        	<div class="table">
+		                        		<div class="tableCell">
+		                        			<img src="/static/static/img/menu-3.png" alt="">
+		                        		</div>
+		                        	</div>
+		                        </div>
 		                        <div class="info fl">
 		                            <div class="table">
 		                                <div class="tableCell">
@@ -289,7 +291,12 @@
 		             <li id="index_4" class="abs" style="border-color: rgb(189, 217, 188); left: 654px; z-index: 4; background: rgb(227, 240, 229);">
 		                 <a href="" class="abs more" style="background:#239542;">MORE</a>
 		                 <a href="" class="clear link">
-		                        <div class="pic fl" style="width: 148px;"><div class="table"><div class="tableCell"><img src="http://www.majorbio.com/site/majorbio/images/menu-4.png" alt=""></div></div></div>
+		                        <div class="pic fl" style="width: 148px;">
+		                        	<div class="table"><div class="tableCell">
+		                        		<img src="/static/static/img/menu-4.png" alt="">
+		                        	</div>
+		                        	</div>
+		                        </div>
 		                        <div class="info fl">
 		                            <div class="table">
 		                                <div class="tableCell">
@@ -303,7 +310,13 @@
 		             <li id="index_5" class="abs" style="border-color: rgb(167, 205, 212); left: 872px; z-index: 5; background: rgb(209, 231, 234);">
 		                 <a href="" class="abs more" style="background:#265aa1;">MORE</a>
 		                 <a href="" class="clear link">
-		                        <div class="pic fl" style="width: 148px;"><div class="table"><div class="tableCell"><img src="http://www.majorbio.com/site/majorbio/images/menu-5.png" alt=""></div></div></div>
+		                        <div class="pic fl" style="width: 148px;">
+		                        	<div class="table">
+		                        		<div class="tableCell">
+		                        			<img src="/static/static/img/menu-5.png" alt="">
+		                        		</div>
+		                        	</div>
+		                        </div>
 		                        <div class="info fl">
 		                            <div class="table">
 		                                <div class="tableCell">
@@ -317,7 +330,13 @@
 		            <li id="index_6" class="abs" style="border-color: rgb(200, 208, 163); left: 1090px; z-index: 6; background: rgb(237, 243, 211);">
 		                 <a href="" class="abs more" style="background:#adc93b;">MORE</a>
 		                 <a href="" class="clear link">
-		                        <div class="pic fl" style="width: 148px;"><div class="table"><div class="tableCell"><img src="http://www.majorbio.com/site/majorbio/images/menu-6.png" alt=""></div></div></div>
+		                        <div class="pic fl" style="width: 148px;">
+		                        	<div class="table">
+		                        		<div class="tableCell">
+		                        			<img src="/static/static/img/menu-6.png" alt="">
+		                        		</div>
+		                        	</div>
+		                        </div>
 		                        <div class="info fl">
 		                            <div class="table">
 		                                <div class="tableCell">
@@ -341,7 +360,7 @@
 				       <li>
 				       	<a class="news-items" itemid="157">
 				       		<div class="pic">
-				       			<img src="{% static 'img/gene-pic-1.jpg' %}" width="100%">
+				       			<img src="/static/static/img/gene-pic-1.jpg" width="100%">
 				       		</div>
 				       	</a>
 				       	<div class="soltx">
@@ -354,7 +373,7 @@
 				       <li>
 				       	<a class="news-items" itemid="158">
 				       		<div class="pic">
-				       			<img src="{% static 'img/gene-pic-2.jpg' %}" width="100%">
+				       			<img src="/static/static/img/gene-pic-2.jpg" width="100%">
 				       		</div>
 				       	</a>
 				       	<div class="soltx">
@@ -367,7 +386,7 @@
 				       <li>
 				       	<a class="news-items" itemid="165">
 				       		<div class="pic">
-				       			<img src="{% static 'img/gene-pic-3.jpg' %}" width="100%"></div></a><div class="soltx"><a class="news-items" itemid="165">
+				       			<img src="/static/static/img/gene-pic-3.jpg" width="100%"></div></a><div class="soltx"><a class="news-items" itemid="165">
 				       				<div class="tits">基因的结构与功能</div>
 				       				<div class="con">一个细胞或病毒所携带的全部遗传信息或整套基因即基因组（genome），它包括每一条染色体和所有亚细胞器的DNA序列信息。基因（gene）则是指能产生一条肽链或功能RNA所必需的DNA片段。它包括编码区和其上下游区域，以及在编码片段间（外显子）的间断切割序列（内含子）。基因经过…</div>
 				       			</a>
@@ -376,7 +395,7 @@
 				       <li>
 				       	<a class="news-items" itemid="164">
 				       		<div class="pic">
-				       			<img src="{% static 'img/gene-pic-4.jpg' %}" width="100%">
+				       			<img src="/static/static/img/gene-pic-4.jpg" width="100%">
 				       		</div>
 				       	</a>
 				       	<div class="soltx">
@@ -389,7 +408,7 @@
 				       <li>
 				       	<a class="news-items" itemid="163">
 				       		<div class="pic">
-				       			<img src="{% static 'img/gene-pic-5.jpg' %}" width="100%"></div></a><div class="soltx">
+				       			<img src="/static/static/img/gene-pic-5.jpg" width="100%"></div></a><div class="soltx">
 				       				<a class="news-items" itemid="163">
 				       					<div class="tits">基因与生命体</div>
 				       					<div class="con">细胞（cell）是生物进行生命活动的基本单位。细菌、立克次体和支原体等属于原核细胞（procarytic cell），真菌、植物、动物及人体是由真核细胞（eucaryotic cell）构成。真核细胞比原核细胞进化程度高、结构复杂，最主要特征是前者含有核被膜包围的细胞核（nucleus）。真核细胞…</div>
@@ -399,7 +418,7 @@
 				       <li>
 				       	<a class="news-items" itemid="162">
 				       		<div class="pic">
-				       			<img src="{% static 'img/gene-pic-6.jpg' %}" width="100%">
+				       			<img src="/static/static/img/gene-pic-6.jpg" width="100%">
 				       		</div>
 				       	</a>
 				       	<div class="soltx">
@@ -412,7 +431,7 @@
 				       <li>
 				       	<a class="news-items" itemid="161">
 				       		<div class="pic">
-				       			<img src="{% static 'img/gene-pic-7.jpg' %}" width="100%">
+				       			<img src="/static/static/img/gene-pic-7.jpg" width="100%">
 				       		</div>
 				       	</a>
 				       	<div class="soltx">
@@ -425,7 +444,7 @@
 				       <li>
 				       	<a class="news-items" itemid="247">
 				       		<div class="pic">
-				       			<img src="/static/img/gene-pic-8.jpg" width="100%">
+				       			<img src="/static/static/img/gene-pic-8.jpg" width="100%">
 				       		</div>
 				       	</a>
 				       	<div class="soltx">
@@ -435,22 +454,67 @@
 				       		</a>
 				       	</div>
 				       </li>
-			</div> 
+					</div> 
+				</div>
 			</div>
-			</div>
+			<!--网页底部-->
 			<div class="footer">
-				
+		        <div class="footer-content container clear">
+		            <div class="fl cont-list">
+		                <ul>
+		                        <h3>关于我们</h3>
+		                        <li><a href="#">平台简介</a></li>
+		                        <li><a href="#">荣誉资质</a></li>
+		                        <li><a href="#">联系方式</a></li>
+		                        <li><a href="#">加入我们</a></li>
+		                        <li><a href="#">社会公益</a></li>
+		                        <li><a href="#">在线交流</a></li>
+		                    </ul>
+		                    <ul>
+		                        <h3>遗传咨询</h3>
+		                            <li><a href="#">专家团队</a></li>
+		                            <li><a href="#">咨询网点</a></li>
+		                            <li><a href="#">基因百科</a></li>
+		                            <li><a href="#">用户案例</a></li>
+		                            <li><a href="#">检测流程</a></li>
+		                    </ul>
+		                    <ul>
+		                        <h3>会员专区</h3>
+		                        <li><a href="#">加入会员</a></li>
+		                        <li><a href="#">检测激活</a></li>
+		                        <li><a href="#">查询下载</a></li>
+		                    </ul>
+		                    <ul>
+		                        <h3>新闻资讯</h3>
+		                        <li><a href="#">活动公告</a></li>
+		                        <li><a href="#">公司新闻</a></li>
+		                        <li><a href="#">行业资讯</a></li>
+		                    </ul>
+		                </div>
+		                <div class="fr cont-contact">
+		                    <div class="fl"><img src="/static/static/img/wx.jpg" alt=""><p class="wx-name">天昊健康微信</p></div>
+		                    <div class="fr">
+		                        <div class="logo"><a href="#"><img src="/static/static/img/logo.jpg" alt=""></a></div>
+		                            <ul class="contact">
+		                                <li class="email">邮箱： <a title="发送邮件" href="mailto:service.health@geneskies.com">service.health@geneskies.com</a></li>
+		                                <li class="web">网址：www.health.com</li>
+		                                <li class="fax">传真：+86-021-59802095</li>
+		                                <li class="tel">服务热线：<span class="num">400-011-8966</span></li>
+		                            </ul>
+		                    </div>
+		                </div>
+		            </div>
+          </div>
+            <!--浮动内容-->
+			<div class="float-sild">
+			  <a href="tel:12345678" class="tel"></a>
+			  <a href="#" class="go-top"></a>
 			</div>
 		</div>
 	</body>
-	<!--首页动态效果的实现-->
-	<script src="{% static 'js/homePage.js' %}" type="text/javascript" charset="utf-8"></script>
-	 <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    
-{#    <script>window.jQuery || document.write('<script src="js"><\/script>')</script>#}
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <!--<script src="BootStrap/assets/js/ie10-viewport-bug-workaround.js"></script>-->
+	<script>window.jQuery || document.write('<script src="static/BootStrap/assets/js/vendor/jquery.min.js"><\/script>')</script>
+	<script src="/static/static/BootStrap/js/bootstrap.min.js"></script>
+    <script src="/static/static/BootStrap/assets/js/ie10-viewport-bug-workaround.js"></script>
+	<script src="/static/static/BootStrap/assets/js/ie-emulation-modes-warning.js"></script>
+    <script src="/static/js/homePage.js" type="text/javascript" charset="utf-8"></script>
 </html>
