@@ -22,5 +22,5 @@ from homepage import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^tianhao/',include("homepage.urls",namespace="tianhao")),
-    url(r'^static/$',views.cart,name="cart")
+    url(r'^/tianhao/cart/data/cartData.json/$',RedirectView.as_view(url='/static/data/cartData.json/'))
 ]
