@@ -37,15 +37,12 @@ def login(request):
     username = request.POST.get("txtUserName")
     password = request.POST.get("txtPassword")
     try:
-        print ">>>password1", password
         user = User.objects.get(username=username)
-        print ">>>>>False",user.passwprd == hashlib.md5(password.encode()).hexdigest()
         if user.passwprd == hashlib.md5(password.encode()).hexdigest():
             status["status"] = 200
             status["data"] = {"info":"登录成功","user":username,"pwd":password}
         else:
-            print ">>>password",password
-            status["status"] = 201
+            status["status"] = 400
             status["data"] = {"info": "密码不正确"}
     except:
         status["data"] = {"info":"账户不可用"}
