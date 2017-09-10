@@ -37,7 +37,7 @@ $(document).ready(function(){
 				{
 					orderId : 'GH2017081410001',
 					productName : '贝康诺TM孕前夫妇基因筛检(大众套餐)',
-					logo : 'static/img/product-1.jpg',
+					logo : '/static/static/img/product-1.jpg',
 					productPrice: 2400,
 					buyAmount : 1,
 					totalMoney : 2400,
@@ -47,7 +47,7 @@ $(document).ready(function(){
 				{
 					orderId : 'GH2017081410002',
 					"productName":"贝康诺TM孕前夫妇地中海贫血基因筛检",
-					logo : 'static/img/product-2.jpg',
+					logo : '/static/static/img/product-2.jpg',
 					productPrice: 180,
 					buyAmount : 2,
 					totalMoney : 360,
