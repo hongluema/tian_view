@@ -49,8 +49,8 @@ methods: {
       cartView: function() {
         var _this = this;
         this.$http.get("data/cartData.json", {"id": 123}).then(function(res) {
-            var resultObj = JSON.parse(res.body)
-          _this.productList = resultObj.result.list;
+            // var resultObj = JSON.parse(res.body)
+          _this.productList = res.body.result.list;
           // _this.totalMoney =  res.body.result.totalMoney;
         });
       },
