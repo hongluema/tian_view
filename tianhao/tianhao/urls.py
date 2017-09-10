@@ -15,8 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.views.generic.base import TemplateView
+from django.views.generic import RedirectView
+from homepage import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^tianhao/',include("homepage.urls",namespace="tianhao")),
+    url(r'^static/$',views.cart,name="cart")
 ]
