@@ -280,7 +280,7 @@
 												</div>
 											</div>
 											<div class="cart-tab-2">
-												<div class="item-price">{{ item.productPrice}} </div>
+												<div class="item-price">{% verbatim %}{{ item.productPrice}}{% endverbatim %} </div>
 											</div>
 											<div class="cart-tab-3">
 												<div class="item-quantity">
@@ -295,7 +295,7 @@
 												</div>
 											</div>
 											<div class="cart-tab-4">
-												<div class="item-price-total">{{ item.productPrice}} * {{item.productQuantity }}</div>
+												<div class="item-price-total">{% verbatim %}{{ item.productPrice}} * {{item.productQuantity }}{% endverbatim %}</div>
 											</div>
 											<div class="cart-tab-5">
 												<div class="cart-item-operation">
