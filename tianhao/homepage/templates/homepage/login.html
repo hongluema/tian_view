@@ -157,7 +157,8 @@
 		     			<a href="/tianhao/require_register/">新用户注册</a>
 		     		</h2>
 		     		<form id="regForm" name="regForm"  action="/tianhao/login/" method="POST">
-		     			<div class="lovit">
+		     			{% csrf_token %}
+                        <div class="lovit">
 					      <span class="sjl"></span>
 					      <p class="lblc input-group"">
 					      	<span class="input-group-addon">

@@ -160,7 +160,7 @@
 		     			<a href="/tianhao/require_login/">用户登录</a>
 		     		</h2>
 		     		<form id="regForm" name="regForm" action="/tianhao/register/" method="POST">
-		     			
+		     			{% csrf_token %}
 		     			<div class="lovit">
 					      <span class="sjl"></span>
 					      <p class="ciles">
