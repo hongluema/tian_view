@@ -67,6 +67,7 @@ def register(request):
     user.mobile = mobile
     user.email = email
     user.save()
+    status["status"] = 200
     status["data"] = {"info": "登录成功", "user": username, "pwd": password}
     # else:
     #     status["data"] = {"info": "两次密码不一致", "user": username}
