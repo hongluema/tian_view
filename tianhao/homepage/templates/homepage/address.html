@@ -300,28 +300,28 @@
 					</thead>
 					<tbody>
 						<tr ng-repeat=" product in productList ">
-							<td>{{product.orderId}}</td>
-							<td>{{product.productName}}</td>
-							<td><img ng-src={{product.logo}} class="logo" /></td>
-							<td>{{product.productPrice}}</td>
-							<td>{{product.buyAmount}}</td>
-							<td>{{product.totalMoney}}</td>
-							<td>{{product.createTime}}</td>
+							<td>{% verbatim %} {{product.orderId}} {% endverbatim %}</td>
+							<td>{% verbatim %} {{product.productName}} {% endverbatim %}</td>
+							<td><img ng-src={% verbatim %} {{product.logo}} {% endverbatim %} class="logo" /></td>
+							<td>{% verbatim %} {{product.productPrice}} {% endverbatim %}</td>
+							<td>{% verbatim %} {{product.buyAmount}} {% endverbatim %}</td>
+							<td>{% verbatim %} {{product.totalMoney}} {% endverbatim %}</td>
+							<td>{% verbatim %} {{product.createTime}} {% endverbatim %}</td>
 						</tr>
 					</tbody>
 				</table>
 			</div>
 			<div class="confirm_item" style="margin-left: 44px;">
 				<ul>
-					<li class="addr_item">姓名：{{trueName}}</li>
-					<li class="addr_item">电话：{{mobile}}</li>
-					<li class="addr_item">QQ号码：{{QQ}}</li>
-					<li class="addr_item">地址：{{address}}</li>
-					<li class="addr_item" ng-show="needInvoice">抬头发票：{{invoiceTitle}}</li>
+					<li class="addr_item">姓名：{% verbatim %} {{trueName}} {% endverbatim %}</li>
+					<li class="addr_item">电话：{% verbatim %} {{mobile}} {% endverbatim %}</li>
+					<li class="addr_item">QQ号码：{% verbatim %} {{QQ}} {% endverbatim %}</li>
+					<li class="addr_item">地址：{% verbatim %} {{address}} {% endverbatim %}</li>
+					<li class="addr_item" ng-show="needInvoice">抬头发票：{% verbatim %} {{invoiceTitle}} {% endverbatim %}</li>
 				</ul>
 			</div>
 			<div class="confirm_item" style="margin-left: 44px;">
-				<b>支付方式：{{selectPayment.Title}}</b>
+				<b>支付方式：{% verbatim %} {{selectPayment.Title}} {% endverbatim %}</b>
 			</div>
 			<div class="addr_confirm">
 				<button class="addr_btn" ng-click="checkOut()">确认订单</button>
