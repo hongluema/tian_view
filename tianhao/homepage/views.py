@@ -47,7 +47,6 @@ def login(request):
             print ">>>password",password
             status["status"] = 201
             status["data"] = {"info": "密码不正确"}
-            return HttpResponse("")
     except:
         status["data"] = {"info":"账户不可用"}
     response.content = json.dumps(status)
