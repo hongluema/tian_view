@@ -3,6 +3,7 @@ from django.shortcuts import render
 from .models import User
 from django.http import HttpResponse,HttpResponseRedirect
 import hashlib
+from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
 
 def index(request):
@@ -29,18 +30,27 @@ def shopping(request):
     return render(request,"homepage/shopping.html")
 
 
-
+@csrf_exempt
 def login(request):
+    status = {"status":500,"data":"","msg":""}
+    response = HttpResponse()
     username = request.POST.get("txtUserName")
     password = request.POST.get("txtPassword")
     try:
         user = User.objects.get(username=username)
         if user.passwprd == hashlib.md5(password.encode()).hexdigest():
-            return HttpResponse("认证成功")
+            status["status"] = 200
+            status["data"] = {"info":"登录成功","user":username,"pwd":password}
         else:
-            return HttpResponse("密码不正确")
+            status["status"] = 400
+            status["data"] = {"info": "密码不正确"}
+            return HttpResponse("")
     except:
         return HttpResponse('账户不可用')
+    response.content = json.dumps(status)
+    response.content_type = "application/json"
+    response["Access-Control-Allow-Origin"] = '*'
+    return response
 
 def register(request):
     username = request.POST.get("txtUserName")
