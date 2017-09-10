@@ -2,6 +2,7 @@
 from django.conf.urls import url
 from django.contrib import admin
 from . import views
+from django.views.generic.base import TemplateView
 
 app_name = "homepage"
 
@@ -15,5 +16,5 @@ urlpatterns = [
     url("^shopping/$",views.shopping,name="shopping"),
     url("^require_register/$",views.require_register,name="require_register"),
     url("^require_login/$",views.require_login,name="require_login"),
-    url("^get_json/$",views.get_json,name="get_json"),
+    url("^cart/data/cartData.json/$",views.get_json,name="get_json"),
 ]
