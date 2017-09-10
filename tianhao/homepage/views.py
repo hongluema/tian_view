@@ -60,61 +60,62 @@ def register(request):
         return HttpResponse("两次密码不一致，请核对后重新输入!")
 import json
 def get_json(request):
-    response = HttpResponse()
-    a={
-  "status":1,
-  "result":{
-    "totalMoney":109,
-    "list":[
-      {
-        "productId":"201703010001",
-        "productName":"贝康诺TM孕前夫妇基因筛检(大众套餐)",
-        "productPrice":2400,
-        "productQuantity":1,
-        "productImage":"static/img/product-1.jpg",
-        "parts":[
-          {
-            "partsId":"10001",
-            "partsName":"迪士尼门票"
-          },
-          {
-            "partsId":"10002",
-            "partsName":"耳聋分析"
-          }
-        ]
-      },
-      {
-        "productId":"201703010002",
-        "productName":"贝康诺TM孕前夫妇地中海贫血基因筛检",
-        "productPrice":3,
-        "productQuantity":180,
-        "productImage":"static/img/product-2.jpg",
-        "parts":[
-          {
-            "partsId":"20001",
-            "partsName":"烧水壶"
-          }
-        ]
-      },
-      {
-        "productId":"201703010003",
-        "productName":"贝康诺TM孕前夫妇耳聋基因筛检",
-        "productPrice":180,
-        "productQuantity":1,
-        "productImage":"static/img/product-3.jpg",
-        "parts":[
-          {
-            "partsId":"10001",
-            "partsName":"茶具"
-          }
-        ]
-      }
-    ]
-  },
-  "message":""
-}
-    response.content = json.dumps(a)
-    response.content_type = "application/json"
-    response["Access-Control-Allow-Origin"] = '*'
-    return response
+    return render(request,'homepage/cartData.json')
+    # response = HttpResponse()
+  #   a={
+  # "status":1,
+  # "result":{
+  #   "totalMoney":109,
+  #   "list":[
+  #     {
+  #       "productId":"201703010001",
+  #       "productName":"贝康诺TM孕前夫妇基因筛检(大众套餐)",
+  #       "productPrice":2400,
+  #       "productQuantity":1,
+  #       "productImage":"static/img/product-1.jpg",
+  #       "parts":[
+  #         {
+  #           "partsId":"10001",
+  #           "partsName":"迪士尼门票"
+  #         },
+  #         {
+  #           "partsId":"10002",
+  #           "partsName":"耳聋分析"
+  #         }
+  #       ]
+  #     },
+  #     {
+  #       "productId":"201703010002",
+  #       "productName":"贝康诺TM孕前夫妇地中海贫血基因筛检",
+  #       "productPrice":3,
+  #       "productQuantity":180,
+  #       "productImage":"static/img/product-2.jpg",
+  #       "parts":[
+  #         {
+  #           "partsId":"20001",
+  #           "partsName":"烧水壶"
+  #         }
+  #       ]
+  #     },
+  #     {
+  #       "productId":"201703010003",
+  #       "productName":"贝康诺TM孕前夫妇耳聋基因筛检",
+  #       "productPrice":180,
+  #       "productQuantity":1,
+  #       "productImage":"static/img/product-3.jpg",
+  #       "parts":[
+  #         {
+  #           "partsId":"10001",
+  #           "partsName":"茶具"
+  #         }
+  #       ]
+  #     }
+  #   ]
+  # },
+  # "message":""
+# }
+#     response.content = json.dumps(a)
+#     response.content_type = "application/json"
+#     response["Access-Control-Allow-Origin"] = '*'
+#     return response
 
