@@ -58,6 +58,7 @@ def register(request):
         return HttpResponse("注册成功")
     else:
         return HttpResponse("两次密码不一致，请核对后重新输入!")
+
 import json
 def get_json(request):
     # return render(request,'homepage/cartData.json')
@@ -87,8 +88,8 @@ def get_json(request):
       {
         "productId":"201703010002",
         "productName":"贝康诺TM孕前夫妇地中海贫血基因筛检",
-        "productPrice":3,
-        "productQuantity":180,
+        "productPrice":180,
+        "productQuantity":3,
         "productImage":"/static/static/img/product-2.jpg",
         "parts":[
           {
