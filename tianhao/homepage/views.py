@@ -57,19 +57,19 @@ def register(request):
     response = HttpResponse()
     username = request.POST.get("txtUserName")
     password = request.POST.get("txtPassword")
-    password2 = request.POST.get("txtConfirm")
+    # password2 = request.POST.get("txtConfirm")
     mobile = request.POST.get("txtPhone")
     email = request.POST.get("txtMail")
-    if password == password2:
-        user = User()
-        user.username = username
-        user.passwprd = hashlib.md5(password.encode()).hexdigest()
-        user.mobile = mobile
-        user.email = email
-        user.save()
-        status["data"] = {"info": "登录成功", "user": username, "pwd": password}
-    else:
-        status["data"] = {"info": "两次密码不一致", "user": username}
+    # if password == password2:
+    user = User()
+    user.username = username
+    user.passwprd = hashlib.md5(password.encode()).hexdigest()
+    user.mobile = mobile
+    user.email = email
+    user.save()
+    status["data"] = {"info": "登录成功", "user": username, "pwd": password}
+    # else:
+    #     status["data"] = {"info": "两次密码不一致", "user": username}
     response.content = json.dumps(status)
     response.content_type = "application/json"
     response["Access-Control-Allow-Origin"] = '*'
