@@ -256,6 +256,7 @@
 										</ul>
 									</div>
 									<ul class="cart-item-list">
+                                        {% for item in result.list %}
 										<li v-for="item in productList">
 											<div class="cart-tab-1">
 												<div class="cart-item-check">
@@ -306,6 +307,7 @@
 												</div>
 											</div>
 										</li>
+                                        {% endfor %}
 									</ul>
 								</div>
 							</div>
