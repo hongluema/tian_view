@@ -42,11 +42,11 @@ def login(request):
             status["status"] = 200
             status["data"] = {"info":"登录成功","user":username,"pwd":password}
         else:
-            status["status"] = 400
+            status["status"] = 201
             status["data"] = {"info": "密码不正确"}
             return HttpResponse("")
     except:
-        return HttpResponse('账户不可用')
+        status["data"] = {"info":"账户不可用"}
     response.content = json.dumps(status)
     response.content_type = "application/json"
     response["Access-Control-Allow-Origin"] = '*'
