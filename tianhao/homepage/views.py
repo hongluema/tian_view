@@ -31,8 +31,8 @@ def shopping(request):
 
 
 def login(request):
-    username = request.POST.get("username")
-    password = request.POST.get("password")
+    username = request.POST.get("txtUserName")
+    password = request.POST.get("txtPassword")
     try:
         user = User.objects.get(username=username)
         if user.passwprd == hashlib.md5(password.encode()).hexdigest():
@@ -43,11 +43,11 @@ def login(request):
         return HttpResponse('账户不可用')
 
 def register(request):
-    username = request.POST.get("username")
-    password = request.POST.get("password")
-    password2 = request.POST.get("password2")
-    mobile = request.POST.get("mobile")
-    email = request.POST.get("email")
+    username = request.POST.get("txtUserName")
+    password = request.POST.get("txtPassword")
+    password2 = request.POST.get("txtConfirm")
+    mobile = request.POST.get("txtPhone")
+    email = request.POST.get("txtMail")
     if password == password2:
         user = User()
         user.username = username
