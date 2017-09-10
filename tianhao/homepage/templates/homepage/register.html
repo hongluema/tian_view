@@ -166,7 +166,7 @@
 					      <p class="ciles">
 					      	<i>*</i>
 					      	<span class="blts">用户名：</span>
-					      	<input type="text" name="txtUserName" ng-model="txtUserName" class="liost" required ng-pattern="/^\w{2,6}$/" placeholder="请输入用户名" />
+					      	<input type="text" id="txtUserName" name="txtUserName" ng-model="txtUserName" class="liost" required ng-pattern="/^\w{2,6}$/" placeholder="请输入用户名" />
 					      	<span class="regForm_checktip" ng-class=" (regForm.txtUserName.$dirty && regForm.txtUserName.$invalid) == true ? 'regForm_wrong' : '' "></span>
 							<span class="regForm_err" ng-show="regForm.txtUserName.$dirty && regForm.txtUserName.$invalid">
 								请输入2到6位的用户名
@@ -175,7 +175,7 @@
 					      <p class="ciles">
 					      	<i>*</i>
 					      	<span class="blts">设置密码：</span>
-					      	<input type="password" name="txtPassword" ng-model="txtPassword" class="liost" required ng-pattern="/^[0-9a-zA-Z]{6,20}$/" placeholder="请输入密码">
+					      	<input type="password" id="txtPassword" name="txtPassword" ng-model="txtPassword" class="liost" required ng-pattern="/^[0-9a-zA-Z]{6,20}$/" placeholder="请输入密码">
 					      	<span class="regForm_checktip" ng-class=" (regForm.txtPassword.$dirty && regForm.txtPassword.$invalid) == true ? 'regForm_wrong' : '' "></span>
 					      	<span class="regForm_err" ng-show="regForm.txtPassword.$dirty && regForm.txtPassword.$invalid">密码范围在6-20位之间</span>
 					      </p>
@@ -189,19 +189,19 @@
 					      <p class="ciles">
 					      	<i>*</i>
 					      	<span class="blts">手机号码：</span>
-					      	<input name="txtPhone" ng-model="txtPhone" type="text" class="liost" required ng-pattern="/^[0-9]{11}$/" placeholder="请填写手机号">
+					      	<input name="txtPhone" id="txtPhone" ng-model="txtPhone" type="text" class="liost" required ng-pattern="/^[0-9]{11}$/" placeholder="请填写手机号">
 					      	<span class="regForm_checktip" ng-class=" (regForm.txtPhone.$dirty && regForm.txtPhone.$invalid) == true ? 'regForm_wrong' : '' "></span>
 					      	<span class="regForm_err" ng-show="regForm.txtPhone.$dirty && regForm.txtPhone.$invalid">请填写正确的11位号码</span>
 					      </p>
 					      <p class="ciles">
 					      	<i>*</i>
 					      	<span class="blts">电子邮箱：</span>
-					      	<input name="txtMail" ng-model="txtMail" type="email" class="liost" placeholder="用于找回密码" required ng-pattern="/^[A-Za-zd]+([-_.][A-Za-zd]+)*@([A-Za-zd]+[-.])+[A-Za-zd]{2,5}$/">
+					      	<input name="txtMail" id="txtMail" ng-model="txtMail" type="email" class="liost" placeholder="用于找回密码" required ng-pattern="/^[A-Za-zd]+([-_.][A-Za-zd]+)*@([A-Za-zd]+[-.])+[A-Za-zd]{2,5}$/">
 					      	<span class="regForm_checktip" ng-class=" (regForm.txtMail.$dirty && regForm.txtMail.$invalid) == true ? 'regForm_wrong' : '' "></span>
 					      	<span class="regForm_err" ng-show="regForm.txtMail.$dirty && regForm.txtMail.$invalid">请输入合法邮箱</span>
 					      </p>
 					      <p class="lblc">
-					      	<input name="" type="submit" value="注册" class="loglst">
+					      	<input name="" type="button" id="submitBtn" value="注册" class="loglst">
 					      </p>
 					      <div class="pislt">
 					        <span class="fr">传真：0592-12365678</span>客服热线：400-012-9397
@@ -269,5 +269,10 @@
     <script>window.jQuery || document.write('<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"><\/script>')</script>
     <script src="/static/static/BootStrap/js/bootstrap.min.js"></script>
     <script src="/static/static/BootStrap/assets/js/ie10-viewport-bug-workaround.js"></script>
-    	<script src="/static/js/register.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/static/js/register.js" type="text/javascript" charset="utf-8"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </html>

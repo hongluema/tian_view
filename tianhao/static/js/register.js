@@ -41,52 +41,28 @@ $(document).ready(function(){
 		}
 	);
 	
-//	
-//	$('#btnSubmit').submit(function(){
-//		console.log('1');
-//		$.ajax({
-//			url: $("#regform").attr("url"),
-//			type: 'POST',
-//			data: params,
-//			contentType: 'application/x-www-form-urlencoded',
-//		 	beforeSend: showRequest,
-//			success: showResponse,
-//			error: showError
-//		});
-//
-//
-//
-//	    //表单提交前
-//	    function showRequest(formData, jqForm, options) {
-//			$("#btnSubmit").val("正在提交...")
-//	        $("#btnSubmit").prop("disabled", true);
-//	       
-//	    }
-//	    //表单提交后
-//	    function showResponse(data, textStatus) {
-//	        if (data.status == 1) { //成功
-//	            console.log({ title: '提示', content: '恭喜您，已经注册成功！', okValue: '确定', ok: function () { location.href = data.url; } }).showModal();
-//	//			var d = dialog({content:data.msg}).show();
-//	//			setTimeout(function () {
-//	//				d.close().remove();
-//	//				location.href = data.url;
-//	//			}, 2000);
-//	        } else { //失败
-//	            console.log({title:'提示', content:data.msg, okValue:'确定', ok:function (){}}).showModal();
-//	            $("#btnSubmit").val("再次提交");
-//	            $("#btnSubmit").prop("disabled", false);
-//	        }
-//	    }
-//	    //表单提交出错
-//	    function showError(XMLHttpRequest, textStatus, errorThrown) {
-//	        console.log({title:'提示', content:"状态：" + textStatus + "；出错提示：" + errorThrown, okValue:'确定', ok:function (){}}).showModal();
-//	        $("#btnSubmit").val("再次提交");
-//	        $("#btnSubmit").prop("disabled", false);
-//	       
-//	    }
-//	    return false;
-//	});
-//	
+	$('#submitBtn').click(function(){
+		var params = {
+			'txtUserName' : $('#txtUserName').val(),
+			'txtPassword' : $('#txtPassword').val(),
+			'txtPhone' : $('#txtPhone').val(),
+			'txtMail' : $('#txtMail').val()
+		};
+		$.ajax({
+			type:"post",
+			url:"http://106.15.177.204/tianhao/register/",
+			async:true,
+			data: params,
+			success: function(data){
+				if(JSON.parse(data).status == 200){
+					alert('恭喜你，注册成功！');
+					window.location.href = '/tianhao/';
+				}else{
+					alert('抱歉注册失败，请重新提交！');
+				}
+			}
+		});
+	})
 	
 	
 	
