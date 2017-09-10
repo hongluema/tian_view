@@ -37,11 +37,14 @@ def login(request):
     username = request.POST.get("txtUserName")
     password = request.POST.get("txtPassword")
     try:
+        print ">>>password1", password
         user = User.objects.get(username=username)
+        print ">>>>>False",user.passwprd == hashlib.md5(password.encode()).hexdigest()
         if user.passwprd == hashlib.md5(password.encode()).hexdigest():
             status["status"] = 200
             status["data"] = {"info":"登录成功","user":username,"pwd":password}
         else:
+            print ">>>password",password
             status["status"] = 201
             status["data"] = {"info": "密码不正确"}
             return HttpResponse("")
@@ -52,7 +55,10 @@ def login(request):
     response["Access-Control-Allow-Origin"] = '*'
     return response
 
+@csrf_exempt
 def register(request):
+    status = {"status": 500, "data": "", "msg": ""}
+    response = HttpResponse()
     username = request.POST.get("txtUserName")
     password = request.POST.get("txtPassword")
     password2 = request.POST.get("txtConfirm")
@@ -65,9 +71,13 @@ def register(request):
         user.mobile = mobile
         user.email = email
         user.save()
-        return HttpResponse("注册成功")
+        status["data"] = {"info": "登录成功", "user": username, "pwd": password}
     else:
-        return HttpResponse("两次密码不一致，请核对后重新输入!")
+        status["data"] = {"info": "两次密码不一致", "user": username}
+    response.content = json.dumps(status)
+    response.content_type = "application/json"
+    response["Access-Control-Allow-Origin"] = '*'
+    return response
 
 import json
 def get_json(request):
